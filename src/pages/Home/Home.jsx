@@ -1,9 +1,9 @@
-import React from 'react';
+import Users from "../../components/Users/Users";
 
 const Home = () => {
     return (
-        <div>
-            <h2>Home Page</h2>
+        <div className="px-6 py-12">
+            <Users/>
         </div>
     );
 };

@@ -10,8 +10,11 @@ const Footer = () => {
       <hr className=" border-blue-gray-50" />
       <footer className=" flex flex-row w-full bg-white p-4 shadow-xl items-center justify-between">
         <div>
-          <p className="block text-center font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
-            © {currentYear} Scizers Technologies LLP | Developed by Md. Monir Uddin
+          <p className="block text-center text-xs lg:text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+            © {currentYear} Scizers Technologies LLP. Developed by 
+            <Link to="https://monir-portfolio.web.app/" target="_blank">
+              <span className="pl-1 text-blue-800 hover:font-medium">Md. Monir Uddin</span>
+            </Link>
           </p>
         </div>
         <div className="flex flex-row gap-6 text-xl">

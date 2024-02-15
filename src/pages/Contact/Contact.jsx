@@ -9,7 +9,7 @@ const Contact = () => {
             </h1>
             <p className="mx-auto text-base leading-relaxed lg:w-2/3">
               Feel free to reach out to us! Whether you have a question,
-              feedback, or a collaboration proposal, we&spos;d love to hear from
+              feedback, or a collaboration proposal, we&apos;d love to hear from
               you.
             </p>
           </div>

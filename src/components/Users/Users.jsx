@@ -1,15 +1,31 @@
 import { useState } from "react";
 import UserCard from "./UserCard";
+import Loading from "../Loading/Loading";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [currentPage, setCurrenPage] = useState(1);
 
   useState(() => {
+    setLoading(true);
     fetch("https://swapi.dev/api/people")
-      .then((res) => res.json())
-      .then((data) => setUsers(data.results));
+      .then((res) => {
+        if(!res.ok){
+            throw new Error("Failed to Fetch Data");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setUsers(data.results);
+        setLoading(false);
+      })
+      .catch(error =>{
+        setError(error.message);
+        setLoading(false);
+      })
   }, []);
   console.log(users);
 
@@ -29,6 +45,9 @@ const Users = () => {
   const currentCards = filterUser.slice(indexOfFirstCard, indexOfLastCard);
 
   const paginate = (pageNumber) => setCurrenPage(pageNumber);
+
+  if(loading) return <Loading/>
+  if(error) return <div>Error: {error}</div>
 
   return (
     <>

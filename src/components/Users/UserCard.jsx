@@ -7,7 +7,7 @@ const UserCard = ({user}) => {
     const hairColorMap = {
       brown: "#8B4513",
       black: "#000000",
-      blond: "#FFD700",
+      blond: "#E0C092",
       'brown, grey': "#3D3635",
       'auburn, white': "#A55C5C",
     };
@@ -27,6 +27,7 @@ const UserCard = ({user}) => {
       <div className={`card-body text-lg 
       ${hair_color=='brown'? 'text-white': ''} 
       ${hair_color=='black'? 'text-white': ''}
+      ${hair_color=='blond'? 'text-gray-800': ''}
       ${hair_color=='brown, grey'? 'text-white': ''}
       ${hair_color=='auburn, white'? 'text-white': ''}`}>
         <h2 className="text-xl">Name: <span className="font-bold">{name}</span> </h2>

@@ -1,8 +1,9 @@
 .nav a{
-    
     padding: 5px 15px;
-    
+    color: white;   
 }
+
+
 .nav a.active{
     background-color: #0064A5;
     color: white;

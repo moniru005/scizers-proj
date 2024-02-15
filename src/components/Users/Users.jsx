@@ -33,14 +33,14 @@ const Users = () => {
   return (
     <>
       {/* Search */}
-      <div className="p-4">
+      <div className="px-4 pt-12 pb-6 w-full">
         <input
           onChange={handleSearch}
           value={search}
-          className="p-2 border"
+          className="p-4 border border-slate-700 w-full text-center focus:outline-none text-xl"
           type="text"
           name="search"
-          placeholder="Search"
+          placeholder="Search by User Name"
         />
       </div>
 
@@ -59,7 +59,7 @@ const Users = () => {
           <button
             key={index}
             onClick={() => paginate(index + 1)}
-            className={`mx-1 px-3 py-1 bg-gray-200 rounded-md ${
+            className={`mx-1 px-3 py-1 bg-gray-300 rounded-md ${
               currentPage === index + 1 ? "bg-blue-500 text-white" : ""
             }`}
           >

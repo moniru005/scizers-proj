@@ -3,13 +3,13 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 const Main = () => {
-    return (
-        <div>
-            <Navbar/>
-            <Outlet/>
-            <Footer/>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+        <Outlet />
+      <Footer />
+    </div>
+  );
 };
 
 export default Main;
